@@ -1,0 +1,7 @@
+{
+  "name": "aulageo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
