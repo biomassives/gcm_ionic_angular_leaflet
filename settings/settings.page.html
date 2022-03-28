@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons collapse="true" slot="end">
+      <ion-button href="/home">Map</ion-button>
+      <ion-badge color="success">
+        44
+      </ion-badge>
+    </ion-buttons>
+    <ion-title>
+      Ground Cover Mapper
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card >
+  <ion-item><h2>Settings</h2></ion-item>
+  <ion-item>Configure your instance here</ion-item>
+</ion-card>
+
+<ion-item>
+  <ion-label>Manager Controls</ion-label>
+  <ion-toggle [(ngModel)]="ismanager"></ion-toggle>
+</ion-item>
+<ion-item>
+  <ion-label>Your Maps</ion-label>
+  <ion-button ></ion-button>
+</ion-item>
+<ion-item>
+  <ion-label>Your Team</ion-label>
+  <ion-button ></ion-button>
+</ion-item>
+<ion-item>
+  <ion-label>Schedule</ion-label>
+  <ion-button ></ion-button>
+</ion-item>
+
+
+<ion-item>
+  <ion-label>Download Map Data</ion-label>
+  <ion-button ></ion-button>
+</ion-item>
+
+<ion-item>
+  <my-select [(ngModel)]="whatever" [list]="whateverList" ngDefaultControl></my-select>
+</ion-item>
+
+</ion-content>
