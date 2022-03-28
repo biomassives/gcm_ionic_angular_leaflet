@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'addpoint',
     loadChildren: () => import('./addpoint/addpoint.module').then( m => m.AddpointPageModule)
   },
+  {
+    path: 'thanks',
+    loadChildren: () => import('./thanks/thanks.module').then( m => m.ThanksPageModule)
+  },
 ];
 
 @NgModule({

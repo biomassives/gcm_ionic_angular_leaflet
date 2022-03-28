@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { Routes, RouterModule } from '@angular/router';
+
+
 @Component({
   selector: 'app-addpoint',
   templateUrl: './addpoint.page.html',
@@ -35,6 +38,7 @@ export class AddpointPage implements OnInit {
       return false;
     } else {
       console.log(this.ionicForm.value)
+
     }
   }
 

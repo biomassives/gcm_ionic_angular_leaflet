@@ -1,38 +1,46 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Add a map point</ion-title>
+    <ion-buttons collapse="true" slot="end">
+
+      <ion-button href="/home">Map</ion-button>
+      <ion-button href="/settings">Settings</ion-button>
+      <ion-badge color="success">
+        44
+      </ion-badge>
+    </ion-buttons>
+
+
+    <ion-title>Ground Cover Mapper</ion-title>
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Add data</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
   <form [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
     <ion-item lines="full">
       <ion-label position="floating">Label</ion-label>
       <ion-input formControlName="label" type="text"></ion-input>
     </ion-item>
     <span class="error ion-padding" *ngIf="isSubmitted && errorControl.label.errors?.required">
-      Name is required.
+      Label is required.
     </span>
     <span class="error ion-padding" *ngIf="isSubmitted && errorControl.label.errors?.minlength">
-      Name should be min 2 chars long.
+      Label should be min 2 chars long.
     </span>
+
     <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input formControlName="email" type="email"></ion-input>
-    </ion-item>
-    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.required">
-      Email is required.
-    </span>
-    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
-      Please provide valid email id.
-    </span>
-    <ion-item lines="full">
-      <ion-label position="floating">DOB</ion-label>
+      <ion-label position="floating">Date of obsevation</ion-label>
       <ion-datetime (ionChange)="getDate($event)" formControlName="dob" [value]="defaultDate"></ion-datetime>
     </ion-item>
     <ion-item lines="full">
-      <ion-label position="floating">Mobile</ion-label>
+      <ion-label position="floating">Notes</ion-label>
       <ion-input maxlength="10" formControlName="mobile" type="text" required></ion-input>
     </ion-item>
     <span class="error ion-padding" *ngIf="isSubmitted && errorControl.mobile.errors?.required">
